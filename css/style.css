@@ -1,0 +1,427 @@
+img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 16px;
+}
+
+body{
+    background-color: #EDECEC;
+    font-family: Helvetica, Arial;
+    color: #131516;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 2.986rem;
+    line-height: 1.2;
+    padding: 16px 20px;
+}
+
+h2{
+    font-size: 2.488rem;
+    line-height: 1.2;
+    padding: 12px 0px;
+}
+
+h3{
+    font-size: 2.074rem;
+    line-height: 1.2;
+    padding: 8px 0px;
+}
+
+p{
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 8px 0px
+}
+
+li {
+    padding: 8px 0px;
+}
+
+a {
+    color: #00274C
+}
+
+.logo {
+    max-width: 15%;
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+/* nav styling */
+
+.logo {
+    border-radius: 0;
+}
+
+nav li{
+    /* display: inline; */
+    padding: 12px 12px;
+}
+
+nav .active {
+    border: 2px solid #ffcb05;
+    background-color: #003564;
+    border-radius: 6px;
+}
+
+nav a{
+    color: #fff;
+    font-weight: medium;
+    text-decoration: none; 
+}
+
+nav{
+    background-color: #00274C;
+    padding: 20px 8px; 
+    text-align: left;
+}
+
+/* header styling */
+
+header {
+    background-color: #00274C;
+}
+
+header h1 {
+    color: #fff;
+}
+
+/* footer styling */
+
+footer {
+    background-color: #00274C;
+    color: white;
+    padding: 24px 20px;
+}
+
+footer a {
+    color: #ffcb05;
+}
+
+/* skip to main button styling */
+
+.skip {
+    position: absolute;
+    top: -65px;
+    right: 0px;
+    padding: 12px 8px;
+    background-color: #00274c;
+    color: #ffcb05;
+    z-index: 1;
+}
+
+.skip:focus{
+    top: 0px;
+}
+
+/* index main/grid styling */
+
+#main {
+    margin: 20px;
+}
+
+.index-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.overview {
+    grid-column: 1 / -1;
+    background-image: url("../images/UMSI_MastersOrientation_081825_06.jpg");
+    background-size: cover;
+    height: 100vw;
+    align-content: center;
+}
+
+.intro,
+.importance,
+.steps,
+.programs,
+.about {
+     grid-column: 1 / -1;
+}
+
+.intro {
+     grid-row-start: 2;
+}
+
+.importance {
+     grid-row-start: 3;
+}
+
+.steps {
+     grid-row-start: 4;
+}
+
+.programs {
+     grid-row-start: 5;
+}
+
+.about {
+     grid-row-start: 6;
+}
+
+/* during main/grid styling */
+
+.during-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.during-intro,
+.during-importance,
+.phase {
+    grid-column: 1 / -1
+}
+
+.during-intro {
+    grid-row-start: 1;
+}
+
+.during-importance {
+    grid-row-start: 2;
+}
+
+.phase {
+    grid-row-start: 3;
+}
+
+#main ul {
+    padding-left: 16px;
+}
+
+table {
+    display: flex;
+}
+
+thead {
+    opacity: 0;
+    position: absolute;
+}
+
+tr {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0px;
+    align-self: stretch;
+    align-items: flex-start;
+}
+
+th {
+    padding-bottom: 8px;
+    font-size: 0.833rem;
+    color: #4C5153;
+}
+
+td {
+    padding-bottom: 8px;
+}
+
+tr td:nth-child(2) {
+    font-weight: bold;
+    color: #00274c;
+}
+
+/*404 page styling*/
+.not-found {
+    height: 36vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*styling articles in prep, start, and during*/
+
+article {
+    display: block;
+    background-color: #DAE5FF;
+    margin: 8px 0;
+    padding: 8px 20px 12px 20px;
+    border: solid 1px #C6C3C3;
+    border-radius: 12px;
+}
+
+/*styling 404*/
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.primary-btn {
+    background-color: #00274C;
+    color: #ffcb05;
+    padding: 16px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #00274C;
+    border: solid 1px #00274C;
+    padding: 16px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1200px) {
+
+    /*header styling*/
+
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    nav li {
+        display: inline;
+    }
+
+    ul {
+        margin: 12px 0;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0px 60px;
+    }
+
+    header div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*footer styling*/
+
+    footer {
+        padding: 20px 60px;
+        justify-items: center;
+    }
+
+    /*main styling*/
+
+    #main {
+        grid-template-columns: repeat(12, 1fr);
+        gap: 24px;
+        margin: 32px 60px;
+    }
+
+
+    aside {
+        position: sticky;
+        top: 40px;
+        z-index: 1;
+        grid-column: -4 / -1;
+        padding-left: 24px;
+    }
+
+    .intro,
+    .importance,
+    .steps,
+    .programs,
+    .about {
+        grid-column: 1 / span 9;
+    }
+
+    .intro {
+        grid-row-start: 1;
+    }
+
+    aside h2 {
+        font-size: 2.074rem;
+    }
+
+    .steps,
+    .programs {
+        display: grid;
+        grid-template-columns: subgrid; /*asked Gemini how to make the grandchildren take the grandparent's grid*/
+    }
+
+    .steps h2,
+    .steps p,
+    .programs h2,
+    .programs p {
+        grid-column: 1 / -1;
+    }
+
+    article {
+        display: inline-block;
+        grid-column: span 3;
+
+        margin: 10px 0;
+        padding: 16px 32px 28px 32px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    /*styling first section of main for prep, start, and during*/
+    .first,
+    .during-intro {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 60px;
+    }
+
+    .first img {
+        grid-column: 2 / 3;
+        grid-row: 1 / span 2;
+        object-fit: cover;
+        height: auto;
+    }
+
+    /*styling last sections of main for prep, and start*/
+
+    .last {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .last h2 {
+        grid-column: span 2;
+    }
+
+    .last article:nth-of-type(-n+2) {
+        grid-column: span 2;
+    }
+
+    .last article:last-child {
+        grid-column: 3 / 4;
+        grid-row: 2 / span 2;
+    }
+
+    /*styling last section of during*/
+    .phase {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .phase h2 {
+        grid-column: span 2;
+    }
+
+    .phase article:first-of-type {
+        grid-column: 1 / 2;
+    }
+
+    .phase article:last-of-type {
+        grid-column: 2 / span 2;
+    }
+}
