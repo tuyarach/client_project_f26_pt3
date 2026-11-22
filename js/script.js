@@ -1,19 +1,14 @@
 document.getElementById("year").innerHTML = new Date().getFullYear();
 // taken from https://www.codexworld.com/how-to/get-current-year-to-display-dynamic-year-in-copyright-using-javascript/
 
-function goBack() {
-    let backButton = document.getElementById('back-btn');
+document.getElementById('back-btn').addEventListener('click', function (e) {
+  const isSameOrigin = document.referrer && new URL(document.referrer).origin === window.location.origin;
 
-    backButton.addEventListener('click', (event) => {
+  if (isSameOrigin && window.history.length > 1) {
+    e.preventDefault();
+    window.history.back();
+  }
+  // Otherwise, let the standard <a href="/blog"> navigation happen naturally
 
-        // Check if there is a previous page in the current session history
-        if (window.history.length > 1) {
-        event.preventDefault();
-        window.history.back();
-        }
-        // If history length is 1
-        // it naturally navigates to the original href
-        // taken from Gemini
-
-    });
-}
+  // taken from Gemini
+});
